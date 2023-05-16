@@ -22,9 +22,11 @@ export function videoRealted(related) {
   let str = "";
 
   for (let i = 0; i < related.length; i++) {
-    str += `<iframe id="related"  height="90%" src="https://www.youtube.com/embed/${related[i].video.videoId}" title="YouTube video player" 
+    if (related[i].type === "video") {
+      str += `<iframe id="related"  height="90%" src="https://www.youtube.com/embed/${related[i].video.videoId}" title="YouTube video player" 
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowfullscreen></iframe>`;
+    }
   }
 
   relatedBox.innerHTML = str;

@@ -7,7 +7,7 @@ export function previsualVideo(idVideo, titleVideo, channel, channelIcon) {
   let iframe = `<iframe id="iframe" width="560" height="100%" src="https://www.youtube.com/embed/${idVideo}" title="YouTube video player" 
   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen></iframe>`;
-  let title = `<h4>${titleVideo}</h4>`;
+  let title = `<h2>${titleVideo}</h2>`;
   let icon = `<img src="${channelIcon}" alt="">`;
   let channelName = `<h2>${channel}</h2>`;
 

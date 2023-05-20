@@ -5,9 +5,16 @@ const BUTTON = document.getElementById("button");
 BUTTON.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopImmediatePropagation();
-  setTimeout(() => {
-    document.querySelector(".cortina").style.display = "none";
-  }, 3000);
+  document.querySelector(".cortina").style.display = "none";
+  document.querySelector(".inicio").style.display = "flex";
   let nameVideo = document.getElementById("name-video").value;
   fetchId(nameVideo);
 });
+
+window.onload = () => {
+  setTimeout(() => {
+    document.querySelector(".inicio").style.display = "none";
+    document.querySelector(".cortina").style.display = "block";
+    document.querySelector(".navbar").style.zIndex = "1";
+  }, 3000);
+};

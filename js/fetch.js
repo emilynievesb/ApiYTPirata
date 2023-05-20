@@ -84,6 +84,9 @@ export async function fetchId(nameVideo) {
     fetchDescription(idVideo);
     fetchComments(idVideo);
     fetchRelated(idVideo);
+    setTimeout(() => {
+      document.querySelector(".inicio").style.display = "none";
+    }, 4000);
   } catch (error) {
     console.error(error);
   }

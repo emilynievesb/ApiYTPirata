@@ -5,13 +5,15 @@
   border: 0;
   font-family: "Titan One", cursive;
 }
+
 .container {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.cortina {
+
+.inicio {
   width: 100%;
   height: 100vh;
   background-color: black;
@@ -22,17 +24,27 @@
   align-items: center;
   justify-content: center;
 }
+.cortina {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  display: none;
+}
 .navbar {
   width: 100%;
   height: 10vh;
   background-color: #292728;
   display: flex;
   flex-direction: row;
-  z-index: 1;
+  /* z-index: 1; */
 }
+
 #name-video {
   font-size: 1rem;
 }
+
 .img {
   width: 20%;
   height: 100%;
@@ -57,6 +69,8 @@
 button {
   border-radius: 0.5rem;
   background-color: #ff0000;
+  padding: 0.3rem;
+  cursor: pointer;
 }
 .content {
   background-color: #ffff;
@@ -64,8 +78,9 @@ button {
   width: 100%;
   flex-direction: row;
   display: flex;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
+
 .video {
   width: 70%;
   height: 87vh;
@@ -74,56 +89,83 @@ button {
   flex-direction: column;
   align-items: center;
 }
+
 .result-video {
   width: 80%;
   height: 45vh;
   margin-bottom: 0.6rem;
 }
+
 #iframe {
   width: 100%;
 }
+
 .title {
   width: 100%;
   height: 5vh;
   margin-bottom: 1rem;
 }
+
 h4 {
   text-align: center;
 }
+
 .related {
   width: 100%;
   height: 30vh;
   overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
-  border: 3px solid black;
-  overflow-y: hidden;
+  background-color: rgba(202 202 202 / 57%);
+  border: 1px solid rgba(202 202 202 / 57%);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
+
 #related {
   width: 25%;
   margin: 1rem;
 }
+
+.related::-webkit-scrollbar {
+  height: 4px;
+}
+
+.related::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.related::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(255 0 0 / 75%);
+}
+
 .info {
   width: 30%;
   background-color: #231f21;
   color: white;
   font-size: 12px;
 }
+
 .header {
   width: 100%;
   height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 3px solid black;
-  padding-top: 0.6rem;
+  /* border: 3px solid black; */
 }
+
 .icon {
   margin-left: 2rem;
   width: 30%;
   height: 10vh;
   padding: 0.5rem;
+  padding-top: 0.8rem;
 }
+
 .icon img {
   width: 55%;
   border-radius: 1.5rem;
@@ -133,19 +175,43 @@ h4 {
   text-align: left;
 }
 .comments {
-  border: 3px solid black;
-
+  /* border: 3px solid black; */
   width: 100%;
   height: 50vh;
   overflow-y: auto;
   padding: 1rem;
 }
+
+#comments-video::-webkit-scrollbar {
+  width: 4px;
+}
+#comments-video::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+#comments-video::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(255, 0, 0, 0.8);
+}
+
 .description {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   padding: 1rem;
   width: 100%;
   height: 24.5vh;
   overflow-y: auto;
+}
+
+.description::-webkit-scrollbar {
+  width: 4px;
+}
+.description::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+.description::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(255, 0, 0, 0.8);
 }
 
 .lds-dual-ring {
@@ -153,6 +219,7 @@ h4 {
   width: 80px;
   height: 80px;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -164,6 +231,7 @@ h4 {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
